@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 30px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Topics Section */
+#topics {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#topics h2 {
+  font-size: 2.2em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+#topics ul {
+  list-style-type: none;
+}
+
+#topics ul li {
+  margin-bottom: 15px;
+}
+
+#topics ul li a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #333;
+  background-color: #e7e7e7;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#topics ul li a:hover {
+  background-color: #d1e7ff;
+}
+
+/* Back Button */
+.back-btn {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Question Block Styles */
+.question-block {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.question-block h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Dropdown for Hints and Solution */
+.dropdown {
+  position: relative;
+  margin-top: 10px;
+}
+
+.dropbtn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.dropdown-content p {
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.dropdown-content p:hover {
+  background-color: #f1f1f1;
+}
+
+/* Code Block Styles */
+pre.code-block {
+  background-color: #272822;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  color: white;
+  font-size: 1.1em;
+}
+
+/* Step-by-Step Guide */
+.solution ol {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.solution ol li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 1.1em;
+  }
+
+  .question-block h3 {
+    font-size: 1.4em;
+  }
+}

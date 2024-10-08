@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File I/O Intermediate Problems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>File I/O Intermediate Problems</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+    </header>
+    <main>
+        <section>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Copy a File</h3>
+                <p class="description">Create a function that copies the contents of one file to another. The function
+                    should take the source file name and the destination file name as arguments.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Open the source file in read mode.</p>
+                        <p>Hint 2: Open the destination file in write mode.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def copy_file(src, dest):
+    with open(src, 'r') as fsrc:
+        with open(dest, 'w') as fdest:
+            fdest.write(fsrc.read())
+
+copy_file('source.txt', 'destination.txt')</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>copy_file(src, dest)</code>.</li>
+                            <li>Open the source file in read mode.</li>
+                            <li>Open the destination file in write mode.</li>
+                            <li>Read from the source and write to the destination.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Read File Line by Line</h3>
+                <p class="description">Create a function that reads a text file and returns a list of its lines,
+                    removing any trailing newline characters.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a loop to read each line.</p>
+                        <p>Hint 2: Use <code>strip()</code> to remove newline characters.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def read_lines(filename):
+    with open(filename, 'r') as f:
+        return [line.strip() for line in f]
+
+print(read_lines('output.txt'))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>read_lines(filename)</code>.</li>
+                            <li>Open the file in read mode.</li>
+                            <li>Use a list comprehension to read and strip each line.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Write a Dictionary to a File</h3>
+                <p class="description">Write a function that takes a dictionary and writes it to a text file in a
+                    key=value format.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Iterate over the dictionary items.</p>
+                        <p>Hint 2: Use <code>f.write()</code> to write each key-value pair.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def write_dict_to_file(d, filename):
+    with open(filename, 'w') as f:
+        for key, value in d.items():
+            f.write(f"{key}={value}\n")
+
+write_dict_to_file({'name': 'Alice', 'age': 30}, 'output.txt')</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>write_dict_to_file(d, filename)</code>.</li>
+                            <li>Open the file in write mode.</li>
+                            <li>Iterate over the dictionary and write each key-value pair.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Count Words in a File</h3>
+                <p class="description">Create a function that counts the total number of words in a given text file.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Read the file content as a single string.</p>
+                        <p>Hint 2: Split the string into words using <code>split()</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def count_words(filename):
+    with open(filename, 'r') as f:
+        content = f.read()
+        return len(content.split())
+
+print(count_words('output.txt'))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>count_words(filename)</code>.</li>
+                            <li>Open the file in read mode.</li>
+                            <li>Read the content and split it into words.</li>
+                            <li>Return the word count.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Find and Replace in File</h3>
+                <p class="description">Write a function that finds a specific word in a text file and replaces it with
+                    another word, then saves the changes back to the file.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Read the entire file content.</p>
+                        <p>Hint 2: Use <code>str.replace()</code> to perform the replacement.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def find_and_replace(filename, old_word, new_word):
+    with open(filename, 'r') as f:
+        content = f.read()
+    content = content.replace(old_word, new_word)
+    with open(filename, 'w') as f:
+        f.write(content)
+
+find_and_replace('output.txt', 'old', 'new')</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>find_and_replace(filename, old_word, new_word)</code>.</li>
+                            <li>Read the file content.</li>
+                            <li>Replace the old word with the new word.</li>
+                            <li>Write the updated content back to the file.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

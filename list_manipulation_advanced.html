@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Manipulation - Advanced</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>List Manipulation - Advanced</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+        <p>Challenge yourself with advanced list manipulation tasks that involve filtering, combining, and more complex list operations.</p>
+    </header>
+
+    <main>
+        <section id="roadmap">
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Flatten a Nested List</h3>
+                <p class="description">Given a nested list <code>nested_list = [[1, 2], [3, 4], [5, 6]]</code>, flatten it into a single list and print the result.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: You can use a nested list comprehension to iterate through each sublist and then each element within the sublists.</p>
+                        <p>Hint 2: Print the flattened list, which will be <code>[1, 2, 3, 4, 5, 6]</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">nested_list = [[1, 2], [3, 4], [5, 6]]
+flattened_list = [item for sublist in nested_list for item in sublist]
+print(flattened_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Use a nested list comprehension to iterate through each sublist and then each element within the sublists.</li>
+                            <li>Store the elements in a new list called <code>flattened_list</code>.</li>
+                            <li>Print the flattened list, which will be <code>[1, 2, 3, 4, 5, 6]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Remove Duplicates from a List</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 2, 3, 4, 4, 5]</code>, remove duplicates and print the unique elements.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: You can use the <code>set()</code> function to remove duplicates.</p>
+                        <p>Hint 2: Convert the set back to a list to retain the list format.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 2, 3, 4, 4, 5]
+unique_list = list(set(my_list))
+print(unique_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list</code>.</li>
+                            <li>Convert <code>my_list</code> to a set to remove duplicates.</li>
+                            <li>Convert the set back to a list and store it in <code>unique_list</code>.</li>
+                            <li>Print the unique list, which will be <code>[1, 2, 3, 4, 5]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Grouping Elements by Frequency</h3>
+                <p class="description">Given a list <code>my_list = [1, 1, 2, 2, 2, 3]</code>, group the elements by their frequency in a dictionary format.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a dictionary to keep track of the count of each element.</p>
+                        <p>Hint 2: Iterate through the list and update the count for each element.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 1, 2, 2, 2, 3]
+frequency_dict = {}
+for item in my_list:
+    frequency_dict[item] = frequency_dict.get(item, 0) + 1
+print(frequency_dict)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Initialize an empty dictionary <code>frequency_dict</code>.</li>
+                            <li>Iterate through each item in <code>my_list</code>.</li>
+                            <li>Use the <code>get()</code> method to retrieve the count of each element and increment it.</li>
+                            <li>Print the final dictionary, which will show counts like <code>{1: 2, 2: 3, 3: 1}</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. List Comprehension for Squares</h3>
+                <p class="description">Given a list of integers <code>my_list = [1, 2, 3, 4, 5]</code>, create a new list that contains the squares of the original integers using list comprehension.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use list comprehension to iterate through <code>my_list</code>.</p>
+                        <p>Hint 2: Square each element in the comprehension.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 3, 4, 5]
+squared_list = [x**2 for x in my_list]
+print(squared_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list</code>.</li>
+                            <li>Create a new list using list comprehension that squares each element.</li>
+                            <li>Print the squared list, which will be <code>[1, 4, 9, 16, 25]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Rotate a List Left</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 3, 4, 5]</code>, rotate the list to the left by two positions and print the result.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use slicing to create the rotated list.</p>
+                        <p>Hint 2: For a left rotation, slice from the beginning and concatenate with the end.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 3, 4, 5]
+rotated_list = my_list[2:] + my_list[:2]
+print(rotated_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list = [1, 2, 3, 4, 5]</code>.</li>
+                            <li>Use slicing to get elements from the second position onward and concatenate with the first two elements.</li>
+                            <li>Print the rotated list, which will be <code>[3, 4, 5, 1, 2]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-block">
+                <h3>6. List Partitioning</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 3, 4, 5, 6]</code>, partition the list into two sublists: one with even numbers and one with odd numbers.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use list comprehension to create both sublists.</p>
+                        <p>Hint 2: Use the modulo operator to check if a number is even or odd.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 3, 4, 5, 6]
+even_numbers = [x for x in my_list if x % 2 == 0]
+odd_numbers = [x for x in my_list if x % 2 != 0]
+print("Even:", even_numbers)
+print("Odd:", odd_numbers)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list</code>.</li>
+                            <li>Create an <code>even_numbers</code> list using comprehension with the condition <code>x % 2 == 0</code>.</li>
+                            <li>Create an <code>odd_numbers</code> list using comprehension with the condition <code>x % 2 != 0</code>.</li>
+                            <li>Print both lists.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-block">
+                <h3>7. Find the Second Largest Number</h3>
+                <p class="description">Given a list <code>my_list = [4, 1, 7, 3, 9, 2]</code>, find the second largest number without using sort.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Initialize two variables to track the largest and second largest values.</p>
+                        <p>Hint 2: Iterate through the list to update the variables accordingly.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [4, 1, 7, 3, 9, 2]
+largest = second_largest = float('-inf')
+
+for number in my_list:
+    if number > largest:
+        second_largest = largest
+        largest = number
+    elif number > second_largest and number != largest:
+        second_largest = number
+
+print(second_largest)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Initialize <code>largest</code> and <code>second_largest</code> to negative infinity.</li>
+                            <li>Iterate through each number in <code>my_list</code>.</li>
+                            <li>Update <code>largest</code> and <code>second_largest</code> based on the current number.</li>
+                            <li>Print the second largest number.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-block">
+                <h3>8. Generate a List of Fibonacci Numbers</h3>
+                <p class="description">Write a function that generates the first <code>n</code> Fibonacci numbers and returns them as a list. For example, if <code>n = 5</code>, the output should be <code>[0, 1, 1, 2, 3]</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Start with the first two Fibonacci numbers, 0 and 1.</p>
+                        <p>Hint 2: Use a loop to generate the next numbers by summing the last two numbers.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def fibonacci(n):
+    fib_list = [0, 1]
+    for i in range(2, n):
+        fib_list.append(fib_list[-1] + fib_list[-2])
+    return fib_list[:n]
+
+print(fibonacci(5))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>fibonacci(n)</code> that initializes a list with the first two Fibonacci numbers.</li>
+                            <li>Use a loop to append the sum of the last two numbers to the list until the length reaches <code>n</code>.</li>
+                            <li>Return the Fibonacci list sliced to the first <code>n</code> numbers.</li>
+                            <li>Print the result for <code>fibonacci(5)</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

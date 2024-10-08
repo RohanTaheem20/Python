@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Manipulation - Intermediate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>List Manipulation - Intermediate</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+        <p>Build on your foundational list manipulation skills with more complex tasks, including sorting, list comprehensions, and multi-dimensional lists.</p>
+    </header>
+
+    <main>
+        <section id="roadmap">
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Reverse a List</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 3, 4, 5]</code>, reverse the list and print the reversed list.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Python lists have a built-in <code>reverse()</code> method.</p>
+                        <p>Hint 2: You can also reverse a list using slicing with the syntax <code>[::-1]</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 3, 4, 5]
+my_list.reverse()
+print(my_list)
+
+# Alternatively:
+# print(my_list[::-1])</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Create a list called <code>my_list</code> with values <code>[1, 2, 3, 4, 5]</code>.</li>
+                            <li>Use the <code>reverse()</code> method to reverse the list in place, or use slicing <code>[::-1]</code> to reverse it and return the result.</li>
+                            <li>Print the reversed list, which will be <code>[5, 4, 3, 2, 1]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Sort a List</h3>
+                <p class="description">You have a list of numbers <code>my_list = [12, 4, 56, 7, 23]</code>. Sort the list in ascending order and print it.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: You can use the <code>sort()</code> method to sort a list in place.</p>
+                        <p>Hint 2: If you need a new sorted list without modifying the original, use the <code>sorted()</code> function.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [12, 4, 56, 7, 23]
+my_list.sort()
+print(my_list)
+
+# Alternatively:
+# sorted_list = sorted(my_list)
+# print(sorted_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list = [12, 4, 56, 7, 23]</code>.</li>
+                            <li>Use the <code>sort()</code> method to sort the list in place, or use <code>sorted()</code> to return a new sorted list.</li>
+                            <li>Print the sorted list, which will be <code>[4, 7, 12, 23, 56]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. List Comprehension</h3>
+                <p class="description">Use list comprehension to generate a list of the squares of numbers from 1 to 10.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: A list comprehension has the form <code>[expression for item in iterable]</code>.</p>
+                        <p>Hint 2: You can use the <code>range()</code> function to generate numbers from 1 to 10.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">squares = [x**2 for x in range(1, 11)]
+print(squares)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Use <code>range(1, 11)</code> to generate numbers from 1 to 10.</li>
+                            <li>Use list comprehension with <code>x**2</code> to compute the square of each number.</li>
+                            <li>Print the resulting list, which will be <code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Remove Duplicates</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 2, 3, 4, 4, 5]</code>, remove the duplicate elements and print the list without duplicates.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: You can convert a list to a <code>set</code> to remove duplicates, as sets do not allow duplicate values.</p>
+                        <p>Hint 2: Convert the set back to a list using the <code>list()</code> function after removing duplicates.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 2, 3, 4, 4, 5]
+my_list = list(set(my_list))
+print(my_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the list <code>my_list = [1, 2, 2, 3, 4, 4, 5]</code>.</li>
+                            <li>Convert the list to a <code>set</code> to remove duplicates, as sets automatically discard duplicates.</li>
+                            <li>Convert the set back to a list and print the result, which will be <code>[1, 2, 3, 4, 5]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 5 -->
+                        <div class="question-block">
+                            <h3>5. Merge Two Lists</h3>
+                            <p class="description">You have two lists: <code>list1 = [1, 3, 5]</code> and <code>list2 = [2, 4, 6]</code>. Merge these two lists into a single list and print the result.</p>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Show Hints</button>
+                                <div class="dropdown-content">
+                                    <p>Hint 1: You can use the <code>+ operator</code> to concatenate two lists.</p>
+                                    <p>Hint 2: You can also use the <code>extend()</code> method to add elements from one list to another.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution">
+                                <button class="dropbtn">Show Solution</button>
+                                <div class="dropdown-content">
+                                    <pre class="code-block">list1 = [1, 3, 5]
+            list2 = [2, 4, 6]
+            merged_list = list1 + list2
+            print(merged_list)
+
+            # Alternatively:
+            # list1.extend(list2)
+            # print(list1)</pre>
+
+                                    <h4>Step-by-Step Guide:</h4>
+                                    <ol>
+                                        <li>Create two lists: <code>list1</code> with values <code>[1, 3, 5]</code> and <code>list2</code> with values <code>[2, 4, 6]</code>.</li>
+                                        <li>Use the <code>+</code> operator to concatenate the two lists or use the <code>extend()</code> method to merge <code>list2</code> into <code>list1</code>.</li>
+                                        <li>Print the merged list, which will be <code>[1, 3, 5, 2, 4, 6]</code>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="question-block">
+                            <h3>6. List Intersection</h3>
+                            <p class="description">Given two lists <code>list1 = [1, 2, 3, 4]</code> and <code>list2 = [3, 4, 5, 6]</code>, find the common elements between the two lists and print them.</p>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Show Hints</button>
+                                <div class="dropdown-content">
+                                    <p>Hint 1: You can use list comprehension to find common elements.</p>
+                                    <p>Hint 2: Use the <code>in</code> keyword to check if an element is present in both lists.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution">
+                                <button class="dropbtn">Show Solution</button>
+                                <div class="dropdown-content">
+                                    <pre class="code-block">list1 = [1, 2, 3, 4]
+            list2 = [3, 4, 5, 6]
+            common_elements = [x for x in list1 if x in list2]
+            print(common_elements)</pre>
+
+                                    <h4>Step-by-Step Guide:</h4>
+                                    <ol>
+                                        <li>Create two lists: <code>list1</code> and <code>list2</code>.</li>
+                                        <li>Use list comprehension to iterate over <code>list1</code> and check if each element is in <code>list2</code>.</li>
+                                        <li>Print the list of common elements, which will be <code>[3, 4]</code>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="question-block">
+                            <h3>7. Count Occurrences</h3>
+                            <p class="description">Given a list <code>my_list = [1, 2, 2, 3, 4, 4, 4, 5]</code>, count how many times each element appears in the list and print the result as a dictionary.</p>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Show Hints</button>
+                                <div class="dropdown-content">
+                                    <p>Hint 1: You can use a dictionary to store the count of each element.</p>
+                                    <p>Hint 2: Iterate through the list and update the count for each element.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution">
+                                <button class="dropbtn">Show Solution</button>
+                                <div class="dropdown-content">
+                                    <pre class="code-block">my_list = [1, 2, 2, 3, 4, 4, 4, 5]
+            count_dict = {}
+            for item in my_list:
+                count_dict[item] = count_dict.get(item, 0) + 1
+            print(count_dict)</pre>
+
+                                    <h4>Step-by-Step Guide:</h4>
+                                    <ol>
+                                        <li>Initialize an empty dictionary <code>count_dict</code>.</li>
+                                        <li>Iterate through each item in <code>my_list</code>.</li>
+                                        <li>Use the <code>get()</code> method to retrieve the count of each element and increment it.</li>
+                                        <li>Print the final dictionary, which will show counts like <code>{1: 1, 2: 2, 3: 1, 4: 3, 5: 1}</code>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="question-block">
+                            <h3>8. Rotate a List</h3>
+                            <p class="description">Given a list <code>my_list = [1, 2, 3, 4, 5]</code>, rotate the list to the right by two positions and print the result.</p>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Show Hints</button>
+                                <div class="dropdown-content">
+                                    <p>Hint 1: You can use slicing to create the rotated list.</p>
+                                    <p>Hint 2: For a right rotation, slice from the end and concatenate with the beginning.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution">
+                                <button class="dropbtn">Show Solution</button>
+                                <div class="dropdown-content">
+                                    <pre class="code-block">my_list = [1, 2, 3, 4, 5]
+            rotated_list = my_list[-2:] + my_list[:-2]
+            print(rotated_list)</pre>
+
+                                    <h4>Step-by-Step Guide:</h4>
+                                    <ol>
+                                        <li>Start with the list <code>my_list = [1, 2, 3, 4, 5]</code>.</li>
+                                        <li>Use slicing to get the last two elements and the rest of the list.</li>
+                                        <li>Concatenate the two slices and print the rotated list, which will be <code>[4, 5, 1, 2, 3]</code>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </main>
+
+                <script src="script.js"></script>
+            </body>
+            </html>

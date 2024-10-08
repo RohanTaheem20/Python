@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File I/O Beginner Problems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>File I/O Beginner Problems</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+    </header>
+    <main>
+        <section>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Write to a File</h3>
+                <p class="description">Create a function that writes a given string to a text file named
+                    <code>output.txt</code>.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>open()</code> function with the mode <code>'w'</code>.</p>
+                        <p>Hint 2: Use the <code>write()</code> method to write to the file.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def write_to_file(content):
+    with open('output.txt', 'w') as f:
+        f.write(content)
+
+write_to_file("Hello, World!")</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>write_to_file(content)</code>.</li>
+                            <li>Open a file in write mode using <code>with open('output.txt', 'w')</code>.</li>
+                            <li>Write the content to the file using <code>f.write(content)</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Read from a File</h3>
+                <p class="description">Create a function that reads the contents of <code>output.txt</code> and returns
+                    it as a string.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>open()</code> function with the mode <code>'r'</code>.</p>
+                        <p>Hint 2: Use the <code>read()</code> method to read the file contents.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def read_from_file():
+    with open('output.txt', 'r') as f:
+        return f.read()
+
+print(read_from_file())</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>read_from_file()</code>.</li>
+                            <li>Open the file in read mode using <code>with open('output.txt', 'r')</code>.</li>
+                            <li>Read the content with <code>f.read()</code> and return it.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Append to a File</h3>
+                <p class="description">Write a function that appends a given string to <code>output.txt</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Open the file in append mode using <code>'a'</code>.</p>
+                        <p>Hint 2: Use the <code>write()</code> method again.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def append_to_file(content):
+    with open('output.txt', 'a') as f:
+        f.write(content)
+
+append_to_file("\nThis is an appended line.")</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>append_to_file(content)</code>.</li>
+                            <li>Open the file in append mode using <code>with open('output.txt', 'a')</code>.</li>
+                            <li>Write the content to the file using <code>f.write(content)</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Count Lines in a File</h3>
+                <p class="description">Create a function that counts the number of lines in <code>output.txt</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Read the file line by line.</p>
+                        <p>Hint 2: Use a loop to count the lines.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def count_lines():
+    with open('output.txt', 'r') as f:
+        return len(f.readlines())
+
+print(count_lines())</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>count_lines()</code>.</li>
+                            <li>Open the file in read mode using <code>with open('output.txt', 'r')</code>.</li>
+                            <li>Read all lines using <code>f.readlines()</code> and return the length.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Write List to File</h3>
+                <p class="description">Create a function that takes a list of strings and writes each string to a new
+                    line in <code>output.txt</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Join the list with newline characters.</p>
+                        <p>Hint 2: Write the joined string to the file.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def write_list_to_file(lst):
+    with open('output.txt', 'w') as f:
+        f.write('\n'.join(lst))
+
+write_list_to_file(["Line 1", "Line 2", "Line 3"])</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>write_list_to_file(lst)</code>.</li>
+                            <li>Open the file in write mode using <code>with open('output.txt', 'w')</code>.</li>
+                            <li>Join the list into a string with newline characters and write it to the file.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

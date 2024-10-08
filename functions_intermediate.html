@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Intermediate Problems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Functions Intermediate Problems</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+    </header>
+    <main>
+        <section>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Fibonacci Sequence</h3>
+                <p class="description">Write a function that returns the <code>n</code>-th number in the Fibonacci
+                    sequence. The Fibonacci sequence is defined as follows: <code>F(0) = 0, F(1) = 1</code>, and
+                    <code>F(n) = F(n-1) + F(n-2)</code> for <code>n &gt; 1</code>.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use recursion to define the Fibonacci function.</p>
+                        <p>Hint 2: Handle the base cases explicitly.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(5))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>fibonacci(n)</code>.</li>
+                            <li>Handle base cases for <code>F(0)</code> and <code>F(1)</code>.</li>
+                            <li>Use recursion for <code>F(n)</code> for <code>n &gt; 1</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Palindrome Check</h3>
+                <p class="description">Create a function that checks if a given string is a palindrome (reads the same
+                    forward and backward).</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Normalize the string by converting it to lowercase.</p>
+                        <p>Hint 2: Compare the string to its reverse.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def is_palindrome(s):
+    s = s.lower()
+    return s == s[::-1]
+
+print(is_palindrome("Racecar"))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>is_palindrome(s)</code>.</li>
+                            <li>Convert the string to lowercase.</li>
+                            <li>Check if the string is equal to its reverse.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Count Unique Elements</h3>
+                <p class="description">Write a function that takes a list and returns the count of unique elements in
+                    that list.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a set to store unique elements.</p>
+                        <p>Hint 2: Return the length of the set.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def count_unique(lst):
+    return len(set(lst))
+
+print(count_unique([1, 2, 2, 3, 4, 4, 4]))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>count_unique(lst)</code>.</li>
+                            <li>Create a set from the list to filter unique elements.</li>
+                            <li>Return the length of the set.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Merge Dictionaries</h3>
+                <p class="description">Create a function that merges two dictionaries. If a key exists in both
+                    dictionaries, keep the value from the second dictionary.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>update()</code> method of dictionaries.</p>
+                        <p>Hint 2: You can also use dictionary unpacking.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def merge_dicts(dict1, dict2):
+    merged = dict1.copy()
+    merged.update(dict2)
+    return merged
+
+print(merge_dicts({'a': 1, 'b': 2}, {'b': 3, 'c': 4}))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>merge_dicts(dict1, dict2)</code>.</li>
+                            <li>Create a copy of the first dictionary.</li>
+                            <li>Use <code>update()</code> to merge the second dictionary.</li>
+                            <li>Return the merged dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Sorting a List of Dictionaries</h3>
+                <p class="description">Write a function that takes a list of dictionaries and sorts them by a specified
+                    key.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>sorted()</code> function with a <code>lambda</code> function.</p>
+                        <p>Hint 2: Specify the key to sort by.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def sort_dicts(lst, key):
+    return sorted(lst, key=lambda x: x[key])
+
+data = [{'name': 'Alice', 'age': 30}, {'name': 'Bob', 'age': 25}]
+print(sort_dicts(data, 'age'))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>sort_dicts(lst, key)</code>.</li>
+                            <li>Use <code>sorted()</code> with a <code>lambda</code> function to sort the list by the
+                                specified key.</li>
+                            <li>Return the sorted list.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

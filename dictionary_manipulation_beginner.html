@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Manipulation - Beginner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dictionary Manipulation - Beginner</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+        <p>Start your journey with basic dictionary manipulation tasks that involve creating, updating, and accessing
+            dictionary values.</p>
+    </header>
+
+    <main>
+        <section id="roadmap">
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Create a Dictionary</h3>
+                <p class="description">Create a dictionary named <code>person</code> with keys <code>name</code>,
+                    <code>age</code>, and <code>city</code> with the following values: <code>'Alice'</code>,
+                    <code>25</code>, <code>'New York'</code>. Print the dictionary.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use curly braces to create the dictionary.</p>
+                        <p>Hint 2: Assign each key to its corresponding value.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {
+    'name': 'Alice',
+    'age': 25,
+    'city': 'New York'
+}
+print(person)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Use curly braces to create a dictionary and assign it to <code>person</code>.</li>
+                            <li>Add the keys <code>'name'</code>, <code>'age'</code>, and <code>'city'</code> with their
+                                respective values.</li>
+                            <li>Print the dictionary to see the result.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Accessing Dictionary Values</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 25, 'city': 'New York'}</code>, print the value associated
+                    with the key <code>'age'</code>.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use square brackets to access the value for the key.</p>
+                        <p>Hint 2: Use <code>print(person['age'])</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+print(person['age'])</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use square brackets with the key <code>'age'</code> to access its value.</li>
+                            <li>Print the value to see the result.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Updating Dictionary Values</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 25, 'city': 'New York'}</code>, update the <code>age</code>
+                    to <code>26</code> and print the updated dictionary.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use square brackets to access the <code>'age'</code> key.</p>
+                        <p>Hint 2: Assign a new value to <code>person['age']</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+person['age'] = 26
+print(person)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use square brackets to access <code>'age'</code> and assign it a new value
+                                <code>26</code>.
+                            </li>
+                            <li>Print the updated dictionary to see the changes.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Adding a New Key-Value Pair</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 26, 'city': 'New York'}</code>, add a new key
+                    <code>'job'</code> with the value <code>'Engineer'</code> and print the updated dictionary.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use square brackets to add a new key to the dictionary.</p>
+                        <p>Hint 2: Assign the value <code>'Engineer'</code> to <code>person['job']</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 26, 'city': 'New York'}
+person['job'] = 'Engineer'
+print(person)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use square brackets to add a new key <code>'job'</code>.</li>
+                            <li>Assign it the value <code>'Engineer'</code>.</li>
+                            <li>Print the updated dictionary to see the new key-value pair.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Removing a Key-Value Pair</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 26, 'city': 'New York', 'job': 'Engineer'}</code>, remove
+                    the key <code>'city'</code> and print the updated dictionary.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>del</code> statement to remove the key.</p>
+                        <p>Hint 2: <code>del person['city']</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 26, 'city': 'New York', 'job': 'Engineer'}
+del person['city']
+print(person)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use the <code>del</code> statement to remove the key <code>'city'</code>.</li>
+                            <li>Print the updated dictionary to verify the removal.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-block">
+                <h3>6. Merging Two Dictionaries</h3>
+                <p class="description">Given two dictionaries <code>dict1 = {'name': 'Alice', 'age': 26}</code> and
+                    <code>dict2 = {'city': 'New York', 'job': 'Engineer'}</code>, merge them into one dictionary and
+                    print the result.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>update()</code> method to merge the dictionaries.</p>
+                        <p>Hint 2: You can also use the <code>**</code> unpacking operator.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">dict1 = {'name': 'Alice', 'age': 26}
+dict2 = {'city': 'New York', 'job': 'Engineer'}
+merged_dict = {**dict1, **dict2}
+print(merged_dict)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the two provided dictionaries.</li>
+                            <li>Use the unpacking operator <code>**</code> to merge them into a new dictionary.</li>
+                            <li>Print the merged dictionary to see the result.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-block">
+                <h3>7. Iterating Over a Dictionary</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 26, 'city': 'New York'}</code>, iterate over the dictionary
+                    and print each key-value pair.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a <code>for</code> loop to iterate through the dictionary.</p>
+                        <p>Hint 2: Use the <code>items()</code> method to get key-value pairs.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 26, 'city': 'New York'}
+for key, value in person.items():
+    print(key, ":", value)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use a <code>for</code> loop to iterate through <code>person.items()</code>.</li>
+                            <li>Print each key and its corresponding value.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-block">
+                <h3>8. Checking if a Key Exists</h3>
+                <p class="description">Given the dictionary
+                    <code>person = {'name': 'Alice', 'age': 26, 'city': 'New York'}</code>, check if the key
+                    <code>'job'</code> exists in the dictionary and print an appropriate message.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>in</code> keyword to check for key existence.</p>
+                        <p>Hint 2: Use an <code>if</code> statement to print the message.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">person = {'name': 'Alice', 'age': 26, 'city': 'New York'}
+if 'job' in person:
+    print("Job exists:", person['job'])
+else:
+    print("Job key does not exist.")</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the provided dictionary <code>person</code>.</li>
+                            <li>Use the <code>in</code> keyword to check if <code>'job'</code> is a key.</li>
+                            <li>Print a message based on the result of the check.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

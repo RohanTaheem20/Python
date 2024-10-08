@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Beginner Problems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Functions Beginner Problems</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+    </header>
+    <main>
+        <section>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Simple Addition</h3>
+                <p class="description">Write a function that takes two numbers as arguments and returns their sum.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>def</code> keyword to define a function.</p>
+                        <p>Hint 2: Use the <code>return</code> statement to return the result.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def add(a, b):
+    return a + b
+
+print(add(3, 5))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>add(a, b)</code> with two parameters.</li>
+                            <li>Return the sum of <code>a</code> and <code>b</code>.</li>
+                            <li>Call the function and print the result.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Finding the Maximum</h3>
+                <p class="description">Create a function that takes three numbers and returns the largest of them.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>max()</code> function to find the largest number.</p>
+                        <p>Hint 2: Compare each number using <code>if</code> statements.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def max_of_three(x, y, z):
+    return max(x, y, z)
+
+print(max_of_three(10, 20, 30))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>max_of_three(x, y, z)</code>.</li>
+                            <li>Use the <code>max()</code> function to determine the largest number.</li>
+                            <li>Return the result.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Count Vowels</h3>
+                <p class="description">Write a function that takes a string and returns the count of vowels in that
+                    string.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Initialize a counter variable.</p>
+                        <p>Hint 2: Iterate through the string and check for vowels.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def count_vowels(s):
+    vowels = 'aeiouAEIOU'
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+print(count_vowels("Hello World"))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>count_vowels(s)</code>.</li>
+                            <li>Initialize a counter for vowels.</li>
+                            <li>Iterate through each character in the string and check if it's a vowel.</li>
+                            <li>Return the count of vowels.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Factorial Calculation</h3>
+                <p class="description">Create a function that takes a non-negative integer and returns its factorial.
+                </p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a loop or recursion to calculate the factorial.</p>
+                        <p>Hint 2: Factorial of <code>n</code> is <code>n * (n-1)!</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>factorial(n)</code>.</li>
+                            <li>Use recursion to calculate the factorial.</li>
+                            <li>Return the calculated factorial.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Check Prime</h3>
+                <p class="description">Write a function that checks if a given number is prime. A prime number is a
+                    number greater than 1 that has no divisors other than 1 and itself.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Check if the number is less than 2.</p>
+                        <p>Hint 2: Loop from 2 to the square root of the number.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(11))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>is_prime(n)</code>.</li>
+                            <li>Check if <code>n</code> is less than 2.</li>
+                            <li>Loop from 2 to the square root of <code>n</code> to check for divisibility.</li>
+                            <li>Return <code>True</code> if no divisors are found, otherwise return <code>False</code>.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

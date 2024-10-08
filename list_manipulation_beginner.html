@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Manipulation - Beginner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>List Manipulation - Beginner</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+        <p>Practice fundamental list manipulation techniques in Python. These challenges will introduce you to basic
+            operations such as accessing elements, slicing, and modifying lists.</p>
+    </header>
+
+    <main>
+        <section id="roadmap">
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Access List Elements</h3>
+                <p class="description">You have a list of numbers <code>my_list = [10, 20, 30, 40, 50]</code>. Access
+                    the third element of the list and print it.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Remember that lists are indexed starting from 0.</p>
+                        <p>Hint 2: To access the third element, use the index <code>2</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [10, 20, 30, 40, 50]
+print(my_list[2])</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Create a list called <code>my_list</code>.</li>
+                            <li>Use the index <code>2</code> to access the third element in the list.</li>
+                            <li>Print the value, which will be <code>30</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Modify List Elements</h3>
+                <p class="description">Given a list <code>my_list = [1, 2, 3, 4, 5]</code>, change the second element to
+                    <code>20</code> and print the updated list.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: You can modify a list by assigning a new value to an index.</p>
+                        <p>Hint 2: The second element has an index of <code>1</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [1, 2, 3, 4, 5]
+my_list[1] = 20
+print(my_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Create a list called <code>my_list</code> with values <code>[1, 2, 3, 4, 5]</code>.</li>
+                            <li>Change the second element (index <code>1</code>) to <code>20</code>.</li>
+                            <li>Print the updated list, which will now be <code>[1, 20, 3, 4, 5]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Append to a List</h3>
+                <p class="description">Starting with an empty list <code>my_list = []</code>, add the numbers
+                    <code>10</code> and <code>20</code> to the list using the <code>append()</code> method, then print
+                    the list.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>append()</code> method to add elements to a list.</p>
+                        <p>Hint 2: The <code>append()</code> method adds elements to the end of the list.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = []
+my_list.append(10)
+my_list.append(20)
+print(my_list)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with an empty list called <code>my_list</code>.</li>
+                            <li>Use <code>append(10)</code> to add the number <code>10</code> to the list.</li>
+                            <li>Use <code>append(20)</code> to add the number <code>20</code> to the list.</li>
+                            <li>Print the final list, which will be <code>[10, 20]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. List Slicing</h3>
+                <p class="description">You have a list <code>my_list = [5, 10, 15, 20, 25, 30]</code>. Extract the
+                    sublist <code>[15, 20, 25]</code> using list slicing and print it.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the slicing syntax <code>my_list[start:end]</code> to extract elements.</p>
+                        <p>Hint 2: The slice should start from index <code>2</code> and end at index <code>5</code>
+                            (exclusive).</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">my_list = [5, 10, 15, 20, 25, 30]
+sublist = my_list[2:5]
+print(sublist)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Create a list called <code>my_list</code> with values
+                                <code>[5, 10, 15, 20, 25, 30]</code>.</li>
+                            <li>Use slicing to extract elements from index <code>2</code> to <code>5</code> (not
+                                inclusive).</li>
+                            <li>Print the sublist, which will be <code>[15, 20, 25]</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

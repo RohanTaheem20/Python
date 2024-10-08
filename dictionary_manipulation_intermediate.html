@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Manipulation - Intermediate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dictionary Manipulation - Intermediate</h1>
+        <a href="index.html" class="back-btn">Back to Topics</a>
+        <p>Enhance your skills with intermediate-level dictionary manipulation tasks that involve more complex
+            operations and methods.</p>
+    </header>
+
+    <main>
+        <section id="roadmap">
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <h3>1. Count the Frequency of Elements</h3>
+                <p class="description">Write a function that takes a list of numbers and returns a dictionary with the
+                    frequency of each number. For example, for the input <code>[1, 2, 2, 3, 3, 3]</code>, the output
+                    should be <code>{1: 1, 2: 2, 3: 3}</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a loop to iterate over the list.</p>
+                        <p>Hint 2: Use the <code>dict.get()</code> method to update the frequency count.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def count_frequency(numbers):
+    frequency = {}
+    for number in numbers:
+        frequency[number] = frequency.get(number, 0) + 1
+    return frequency
+
+print(count_frequency([1, 2, 2, 3, 3, 3]))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>count_frequency(numbers)</code> that takes a list as input.</li>
+                            <li>Create an empty dictionary <code>frequency</code>.</li>
+                            <li>Iterate through the list and update the count in the dictionary using
+                                <code>get()</code>.</li>
+                            <li>Return the frequency dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <h3>2. Nested Dictionaries</h3>
+                <p class="description">Create a nested dictionary to represent a student with name, age, and subjects
+                    (with grades). Then, access and print the grade of a specific subject. For example,
+                    <code>student = {'name': 'Alice', 'age': 25, 'subjects': {'Math': 90, 'Science': 85}}</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use curly braces to create the nested dictionary.</p>
+                        <p>Hint 2: Access the grade using <code>student['subjects']['Math']</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">student = {
+    'name': 'Alice',
+    'age': 25,
+    'subjects': {
+        'Math': 90,
+        'Science': 85
+    }
+}
+print("Math grade:", student['subjects']['Math'])</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Create a nested dictionary representing a student with keys for <code>'name'</code>,
+                                <code>'age'</code>, and <code>'subjects'</code>.</li>
+                            <li>Use nested square brackets to access the grade of a specific subject.</li>
+                            <li>Print the retrieved grade.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <h3>3. Merging Dictionaries with Overlap</h3>
+                <p class="description">Given two dictionaries <code>dict1 = {'a': 1, 'b': 2}</code> and
+                    <code>dict2 = {'b': 3, 'c': 4}</code>, merge them into one dictionary, ensuring that values from
+                    <code>dict2</code> overwrite those from <code>dict1</code> where keys overlap.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>update()</code> method to merge dictionaries.</p>
+                        <p>Hint 2: The second dictionary will overwrite values of the first if keys are the same.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+dict1.update(dict2)
+print(dict1)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Start with the two provided dictionaries.</li>
+                            <li>Use <code>dict1.update(dict2)</code> to merge them.</li>
+                            <li>Print <code>dict1</code> to see the merged result with updated values.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <h3>4. Dictionary Comprehension</h3>
+                <p class="description">Using dictionary comprehension, create a dictionary from a list of numbers where
+                    the keys are the numbers and the values are their squares. For example, for the input
+                    <code>[1, 2, 3]</code>, the output should be <code>{1: 1, 2: 4, 3: 9}</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the syntax <code>{key: value for key in iterable}</code>.</p>
+                        <p>Hint 2: Calculate the square using <code>number ** 2</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">numbers = [1, 2, 3]
+squares = {number: number ** 2 for number in numbers}
+print(squares)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a list of numbers.</li>
+                            <li>Use dictionary comprehension to create a new dictionary where keys are numbers and
+                                values are their squares.</li>
+                            <li>Print the resulting dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <h3>5. Find the Key with the Maximum Value</h3>
+                <p class="description">Given a dictionary <code>scores = {'Alice': 90, 'Bob': 85, 'Charlie': 95}</code>,
+                    find the key (name) associated with the maximum value (score).</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use the <code>max()</code> function with the dictionary's values.</p>
+                        <p>Hint 2: Use a generator expression to find the corresponding key.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">scores = {'Alice': 90, 'Bob': 85, 'Charlie': 95}
+max_name = max(scores, key=scores.get)
+print("The highest score is by:", max_name)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define the dictionary with scores.</li>
+                            <li>Use the <code>max()</code> function to find the key associated with the highest score
+                                using the <code>key</code> parameter.</li>
+                            <li>Print the name of the person with the highest score.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-block">
+                <h3>6. Filtering a Dictionary</h3>
+                <p class="description">Given a dictionary of products and their prices
+                    <code>products = {'apple': 1.2, 'banana': 0.5, 'cherry': 2.5}</code>, filter out products that cost
+                    more than $1. Use dictionary comprehension to create a new dictionary.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use an <code>if</code> condition in your dictionary comprehension.</p>
+                        <p>Hint 2: Access prices using <code>products[item]</code>.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">products = {'apple': 1.2, 'banana': 0.5, 'cherry': 2.5}
+            filtered_products = {item: price for item, price in products.items() if price <= 1}
+            print(filtered_products)</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define the dictionary of products and their prices.</li>
+                            <li>Use dictionary comprehension with a condition to filter items based on price.</li>
+                            <li>Print the filtered dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-block">
+                <h3>7. Inverting a Dictionary</h3>
+                <p class="description">Write a function that takes a dictionary where values are unique and returns a
+                    new dictionary that inverts the keys and values. For example, given
+                    <code>{1: 'one', 2: 'two'}</code>, the output should be <code>{'one': 1, 'two': 2}</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Use a loop or dictionary comprehension to create the inverted dictionary.</p>
+                        <p>Hint 2: Make sure to swap keys and values.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def invert_dict(d):
+            return {value: key for key, value in d.items()}
+
+            print(invert_dict({1: 'one', 2: 'two'}))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>invert_dict(d)</code> that takes a dictionary as input.</li>
+                            <li>Create a new dictionary using comprehension where keys and values are swapped.</li>
+                            <li>Return the inverted dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-block">
+                <h3>8. Grouping Items by a Property</h3>
+                <p class="description">You have a list of tuples containing names and their corresponding ages. Write a
+                    function to group these tuples into a dictionary where the keys are ages and the values are lists of
+                    names. For example, <code>[('Alice', 25), ('Bob', 25), ('Charlie', 30)]</code> should result in
+                    <code>{25: ['Alice', 'Bob'], 30: ['Charlie']}</code>.</p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Show Hints</button>
+                    <div class="dropdown-content">
+                        <p>Hint 1: Initialize an empty dictionary to hold grouped items.</p>
+                        <p>Hint 2: Iterate over the list and append names to the corresponding age key.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <button class="dropbtn">Show Solution</button>
+                    <div class="dropdown-content">
+                        <pre class="code-block">def group_by_age(data):
+            grouped = {}
+            for name, age in data:
+            if age not in grouped:
+            grouped[age] = []
+            grouped[age].append(name)
+            return grouped
+
+            print(group_by_age([('Alice', 25), ('Bob', 25), ('Charlie', 30)]))</pre>
+
+                        <h4>Step-by-Step Guide:</h4>
+                        <ol>
+                            <li>Define a function <code>group_by_age(data)</code> that takes a list of tuples as input.
+                            </li>
+                            <li>Create an empty dictionary <code>grouped</code>.</li>
+                            <li>Iterate through each tuple, adding names to the appropriate list based on age.</li>
+                            <li>Return the grouped dictionary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
